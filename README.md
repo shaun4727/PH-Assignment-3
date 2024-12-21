@@ -57,7 +57,7 @@ given below -
 5. npm run build ( run this command)
 6. npm start (to start the server locally)
 
-Now, project setup is done. Hit the api described above to get the expected result.
+Now, project setup is done. Hit the api described below to get the expected result.
 
 ## API Endpoints
 
