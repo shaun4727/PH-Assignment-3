@@ -2,7 +2,7 @@
 
 # Blog Project
 
-## live URL:
+**live URL:** https://ph-assignment-3-snowy.vercel.app
 
 ## Overview
 
