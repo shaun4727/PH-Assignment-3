@@ -42,12 +42,16 @@ The backend will include secure authentication, role-based access control, and a
 
 ##### POST
 
-##### Description: Registers a new user with the platform. It validates user data and saves it to the database.
+##### Description:
+
+Registers a new user with the platform. It validates user data and saves it to the database.
 
 ##### Request Body
 
+```json
 {
-"name": "John Doe",
-"email": "john@example.com",
-"password": "securepassword"
+    "name": "John Doe",
+    "email": "john@example.com",
+    "password": "securepassword"
 }
+```
