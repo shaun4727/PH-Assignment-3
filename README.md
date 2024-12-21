@@ -323,13 +323,9 @@ In this example:
 
 ---
 
-### 1\. Error Handling
-
-Error handling is crucial in ensuring that an application responds gracefully to unexpected situations, providing users with meaningful feedback while maintaining system stability. A well-structured error response format helps in identifying and diagnosing issues effectively.
-
 #### Common Error Response Format
 
-To maintain consistency across all API endpoints, the following error response structure will be used:
+To maintain consistency across all API endpoints, the following error response structure has been used:
 
 ```json
 {
@@ -343,7 +339,7 @@ To maintain consistency across all API endpoints, the following error response s
 
 #### Types of Errors Handled
 
-The following common errors will be managed with appropriate responses:
+The following common errors has been managed with appropriate responses:
 
 - **Zod Validation Error** (`ZOD_ERROR`): Errors arising from invalid data inputs based on Zod schema validation.
 - **Not Found Error** (`NOT_FOUND_ERROR`): When requested resources (e.g., a user, item, or page) are not found.
@@ -352,4 +348,4 @@ The following common errors will be managed with appropriate responses:
 - **Authorization Error** (`AUTHORIZATION_ERROR`): When the user lacks the necessary permissions to access a resource.
 - **Internal Server Error** (`INTERNAL_SERVER_ERROR`): Unhandled errors or unexpected server issues.
 
-By consistently implementing these error handling mechanisms, we ensure a smooth user experience and easier debugging for developers.
+By consistently implementing these error handling mechanisms, I ensure a smooth user experience and easier debugging.
