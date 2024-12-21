@@ -26,20 +26,22 @@ class QueryBuilder<T> {
     }
 
     filter() {
-        this.modelQuery = this.modelQuery.find({ author: this.query.filter });
+        if (this.query?.filter) {
+            this.modelQuery = this.modelQuery.find({ author: this.query.filter });
+        }
 
         return this;
     }
 
     sort() {
         let order = '';
-        if (this.query.sortOrder) {
+        if (this.query?.sortOrder) {
             order = this.query.sortOrder == 'asc' ? '' : '-';
         }
-        let sort = (this.query.sortBy as string)?.split(',')?.join(` ${order}`) || 'createdAt';
+        let sort = (this.query?.sortBy as string)?.split(',')?.join(` ${order}`) || 'createdAt';
         sort = order + sort;
 
-        this.modelQuery = this.modelQuery.sort(sort as string);
+        this.modelQuery = this.modelQuery?.sort(sort as string);
         return this;
     }
 }

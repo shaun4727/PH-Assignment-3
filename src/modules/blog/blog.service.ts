@@ -58,7 +58,7 @@ const deleteSingleBlogIntoDB = async (id: string, user: JwtPayload) => {
 
 const getAllBlogFromDB = async (query: Record<string, unknown>) => {
     const blogQuery = new QueryBuilder(
-        Blog.find()
+        Blog.find({ isPublished: true })
             .populate('author', '-password -__v -_id -createdAt -updatedAt')
             .select('-__v -createdAt -updatedAt'),
         query

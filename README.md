@@ -2,7 +2,7 @@
 
 # Blog Project
 
-**Live URL:** https://ph-assignment-3-snowy.vercel.app
+**Live Deployment Link:** https://ph-assignment-3-snowy.vercel.app
 
 ## Overview
 
