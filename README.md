@@ -36,6 +36,29 @@ The backend will include secure authentication, role-based access control, and a
 
 ##
 
+# instruction to setup the project locally
+
+This repository is currently public. To setup this project locally follow the instruction
+given below -
+
+1. clone the repository
+2. move into project directory
+3. create an .env which must contain -
+    1. PORT (in which port you want to run the project)
+    2. HOSTNAME (provide a hostname like '127.0.0.1')
+    3. DATABASE_URL (provide mongodb connection string with database name)
+    4. NODE_ENV (provide environment if it is production or development)
+    5. BCRYPT_SALT_ROUND (provide provide a number)
+    6. JWT_ACCESS_SECRET (provide a key)
+    7. JWT_REFRESH_SECRET (provide a key)
+    8. JWT_ACCESS_EXPIRES_IN (provide time when access key will expire)
+    9. JWT_REFRESH_EXPIRES_IN (provide time when refresh key will expire)
+4. npm install (run this command)
+5. npm run build ( run this command)
+6. npm start (to start the server locally)
+
+Now, project setup is done. Hit the api described above to get the expected result.
+
 ## API Endpoints
 
 ### 1\. Authentication
