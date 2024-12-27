@@ -9,7 +9,8 @@ import catchAsync from '../utils/catchAsync';
 
 const auth = (...requiredRoles: TUserRole[]) => {
     return catchAsync(async (req: Request, res: Response, next: NextFunction) => {
-        const token = req.headers.authorization;
+        const authHeader = req.headers['authorization'];
+        const token = authHeader && authHeader.split(' ')[1];
 
         // checking if the token is missing
         if (!token) {
@@ -37,7 +38,7 @@ const auth = (...requiredRoles: TUserRole[]) => {
         }
 
         if (requiredRoles && !requiredRoles.includes(role)) {
-            throw new AppError(401, 'You are not authorized  hi!');
+            throw new AppError(401, 'You are not authorized!');
         }
 
         req.user = decoded as JwtPayload;
